@@ -17,11 +17,54 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
+    padding: 1%;
+
+    /* background-color: red; */
 }
 
 .header {
-    height: 95vh;
-    background-image: url(../img/BB_hero.jpg);
+    height: 98vh;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/BB_outdoors01.jpg); */
+    background-image: linear-gradient(to bottom right, #7ed56f7c, #28b4857c), url(../img/BB_outdoors01.jpg);
     background-size: cover;
-    background-position: top;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    /* nice circle? */
+    /* clip-path: circle(50% at 49% 46%); */
 }
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo {
+    height: 80px;
+    border-radius: 50%;
+}
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.heading-primary{
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 40px;
+    text-align: center;
+}
+
+/* .heading-primary-sub{
+    display:block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17px;
+} */
