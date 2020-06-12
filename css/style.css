@@ -17,7 +17,7 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 1%;
+    padding: 1vw;
 
     /* background-color: red; */
 }
@@ -25,7 +25,9 @@ body {
 .header {
     height: 98vh;
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/BB_outdoors01.jpg); */
-    background-image: linear-gradient(to bottom right, #7ed56f7c, #28b4857c), url(../img/BB_outdoors01.jpg);
+    /* background-image: linear-gradient(to bottom right, #7ed56f7c, #28b4857c), url(../img/BB_outdoors01.jpg); */
+    background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.596), #28b4857c), url(../img/BB_outdoors01.jpg);
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,11 +38,14 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    /* top: 40px;
+    left: 40px; */
+    top: 3vw;
+    left: 3vw;
 }
 .logo {
-    height: 80px;
+    /* height: 80px; */
+    height: 8vw;
     border-radius: 50%;
 }
 .text-box{
@@ -56,10 +61,56 @@ body {
 
 .heading-primary-main{
     display: block;
-    font-size: 60px;
+    /* font-size: 60px; */
+    /* font-size: 200%; */
+    font-size: 8vw;
     font-weight: 400;
-    letter-spacing: 40px;
+    /* letter-spacing: 40px; */
+    letter-spacing: 3vw;
     text-align: center;
+
+    backface-visibility: hidden;
+    animation-duration: 3s;
+}
+
+.heading-primary-main-1{
+    animation-name: fadeInLeft;
+}
+.heading-primary-main-2{
+    animation-name: fadeInStationary;
+}
+.heading-primary-main-3{
+    animation-name: fadeInRight;
+}
+
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0; 
+        transform: translateX(-100%)  
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes fadeInStationary {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0; 
+        transform: translateX(+100%)  
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 /* .heading-primary-sub{
