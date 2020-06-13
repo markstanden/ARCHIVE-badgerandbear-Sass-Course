@@ -3,27 +3,44 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485 */
 
-/* Basic reset */
-* {
+/**************
+* Basic reset *
+***************/
+
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
+}
+body{
     box-sizing: border-box;
 }
+
+/***********************************
+* Root font size for responiveness *
+***********************************/
 
 html{
     font-size: 62.5%; /*Default 10px*/
 }
 
+/**********
+* General *
+***********/
+
 body {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-weight: 400;
-    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
     padding: 3rem;
-
-    /* background-color: red; */
 }
+
+/*************
+* Hero Image *
+**************/
 
 .header {
     height: 98vh;
@@ -41,8 +58,7 @@ body {
     left: 4rem;
 }
 .logo {
-    /* height: 80px; */
-    height: 3.5rem;
+    height: 8rem;
     border-radius: 50%;
 }
 .text-box{
@@ -50,7 +66,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    
     text-align: center;
 }
 .heading-primary{
@@ -187,3 +202,7 @@ body {
     animation: fadeInUp 3s ease 2s;
     animation-fill-mode: backwards;
 }
+
+/***********************************
+* Root font size for responiveness *
+***********************************/
