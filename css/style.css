@@ -53,16 +53,16 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
-.logo {
+.header__logo {
     height: 8rem;
     border-radius: 50%;
 }
-.text-box{
+.header__text-box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -76,7 +76,7 @@ body {
     margin-bottom: 6rem;
 }
 
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -86,26 +86,86 @@ body {
     backface-visibility: hidden;
     animation-duration: 3s;
 }
-.heading-primary-main-1:hover {
-    color:red;
-}
-.heading-primary-main-2:hover {
-    color: green;
-}
-.heading-primary-main-3:hover {
-    color: indigo;
-}
 
-.heading-primary-main-1{
+.heading-primary--main1{
     animation-name: fadeInLeft;
 }
-.heading-primary-main-2{
+.heading-primary--main2{
     animation-name: fadeInStationary;
 }
-.heading-primary-main-3{
+.heading-primary--main3{
     animation-name: fadeInRight;
 }
 
+.heading-primary--main1:hover {
+    color:red;
+}
+.heading-primary--main2:hover {
+    color: green;
+}
+.heading-primary--main3:hover {
+    color: indigo;
+}
+
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 4rem;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+    
+    font-size: 2rem;
+}
+
+.btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+.btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+}
+
+.btn::after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--white{
+    background-color: #fff;
+    color: #777;
+}
+
+.btn--white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.8);
+    opacity: 0;
+}
+
+.btn--animated{
+    backface-visibility: hidden;
+    animation: fadeInUp 3s ease 2s;
+    animation-fill-mode: backwards;
+}
+
+/*************
+* Animations *
+**************/
 
 @keyframes fadeInLeft {
     0% {
@@ -137,7 +197,6 @@ body {
         transform: translate(0);
     }
 }
-
 @keyframes fadeInUp {
     0% {
         opacity: 0; 
@@ -147,61 +206,6 @@ body {
         opacity: 1;
         transform: translate(0);
     }
-}
-
-.btn:link,
-.btn:visited{
-    display: inline-block;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem 4rem;
-    border-radius: 100px;
-    transition: all .2s;
-    position: relative;
-    
-    font-size: 2rem;
-}
-
-.btn:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-}
-.btn:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
-}
-
-.btn-white{
-    background-color: #fff;
-    color: #777;
-}
-
-.btn::after{
-    content: '';
-    display: inherit;
-    height: 100%;
-    width: 100%;
-    border-radius: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn-white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.8);
-    opacity: 0;
-}
-
-.hero-btn{
-    backface-visibility: hidden;
-    animation: fadeInUp 3s ease 2s;
-    animation-fill-mode: backwards;
 }
 
 /***********************************
