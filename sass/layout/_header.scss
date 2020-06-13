@@ -1,0 +1,29 @@
+.header {
+    height: 98vh;
+    background-image: linear-gradient(to bottom right, rgba($color-hero-topleft, $hero-transparency), rgba($color-hero-bottomright, $hero-transparency)), url(../img/BB_outdoors01.jpg);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__logo {
+        height: 8rem;
+        border-radius: 50%;
+    }
+    
+    &__text-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+}

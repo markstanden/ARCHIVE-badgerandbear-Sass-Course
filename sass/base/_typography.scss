@@ -1,0 +1,47 @@
+body {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+
+    margin-bottom: 6rem;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        text-align: center;
+    
+        backface-visibility: hidden;
+        animation-duration: 3s;
+
+        &--1{
+            animation-name: fadeInLeft;
+            
+            &:hover {
+                color:red;
+            }
+        }
+        &--2{
+            animation-name: fadeInStationary;
+
+            &:hover {
+                color: green;
+            }
+        }
+        &--3{
+            animation-name: fadeInRight;
+            
+            &:hover {
+                color: indigo;
+            }
+        }
+    }
+}
