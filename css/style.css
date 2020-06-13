@@ -24,22 +24,16 @@ body {
 
 .header {
     height: 98vh;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/BB_outdoors01.jpg); */
-    /* background-image: linear-gradient(to bottom right, #7ed56f7c, #28b4857c), url(../img/BB_outdoors01.jpg); */
     background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.596), #28b4857c), url(../img/BB_outdoors01.jpg);
     
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    /* nice circle? */
-    /* clip-path: circle(50% at 49% 46%); */
 }
 
 .logo-box {
     position: absolute;
-    /* top: 40px;
-    left: 40px; */
     top: 3vw;
     left: 3vw;
 }
@@ -53,6 +47,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 .heading-primary{
     color: #FFF;
@@ -71,6 +66,15 @@ body {
 
     backface-visibility: hidden;
     animation-duration: 3s;
+}
+.heading-primary-main-1:hover {
+    color: indigo;
+}
+.heading-primary-main-2:hover {
+    color: green;
+}
+.heading-primary-main-3:hover {
+    color: red;
 }
 
 .heading-primary-main-1{
@@ -97,9 +101,11 @@ body {
 @keyframes fadeInStationary {
     0% {
         opacity: 0;
+        transform: translate(0);
     }
     100% {
         opacity: 1;
+        transform: translate(0);
     }
 }
 @keyframes fadeInRight {
@@ -113,9 +119,68 @@ body {
     }
 }
 
-/* .heading-primary-sub{
-    display:block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17px;
-} */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; 
+        transform: translateY(+100%)  
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 2vh auto;
+    padding: 1vh 7.5vw;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after{
+    content: '';
+    /* display: inline-block; */
+    display: inherit;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.8);
+    opacity: 0;
+}
+
+.hero-btn{
+    backface-visibility: hidden;
+    animation: fadeInUp 3s ease-out 2s;
+    animation-fill-mode: backwards;
+}
