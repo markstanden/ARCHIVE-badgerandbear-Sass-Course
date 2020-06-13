@@ -10,14 +10,17 @@ Dark green: #28b485 */
     box-sizing: border-box;
 }
 
+html{
+    font-size: 10px;
+}
 
 body {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 1vw;
+    padding: 3rem;
 
     /* background-color: red; */
 }
@@ -34,12 +37,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 3vw;
-    left: 3vw;
+    top: 4rem;
+    left: 4rem;
 }
 .logo {
     /* height: 80px; */
-    height: 8vw;
+    height: 3.5rem;
     border-radius: 50%;
 }
 .text-box{
@@ -54,30 +57,27 @@ body {
     color: #FFF;
     text-transform: uppercase;
 
-    margin-bottom: 10vh;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main{
     display: block;
-    /* font-size: 60px; */
-    /* font-size: 200%; */
-    font-size: 8vw;
+    font-size: 6rem;
     font-weight: 400;
-    /* letter-spacing: 40px; */
-    letter-spacing: 3vw;
+    letter-spacing: 3.5rem;
     text-align: center;
 
     backface-visibility: hidden;
     animation-duration: 3s;
 }
 .heading-primary-main-1:hover {
-    color: indigo;
+    color:red;
 }
 .heading-primary-main-2:hover {
     color: green;
 }
 .heading-primary-main-3:hover {
-    color: red;
+    color: indigo;
 }
 
 .heading-primary-main-1{
@@ -94,7 +94,7 @@ body {
 @keyframes fadeInLeft {
     0% {
         opacity: 0; 
-        transform: translateX(-100%)  
+        transform: translateX(-20rem)  
     }
     100% {
         opacity: 1;
@@ -114,7 +114,7 @@ body {
 @keyframes fadeInRight {
     0% {
         opacity: 0; 
-        transform: translateX(+100%)  
+        transform: translateX(+20rem)  
     }
     100% {
         opacity: 1;
@@ -125,7 +125,7 @@ body {
 @keyframes fadeInUp {
     0% {
         opacity: 0; 
-        transform: translateY(+500%)  
+        transform: translateY(+50rem)  
     }
     100% {
         opacity: 1;
@@ -138,22 +138,21 @@ body {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
-    margin: 2vh auto;
-    padding: 1vh 7.5vw;
+    padding: 1rem 4rem;
     border-radius: 100px;
     transition: all .2s;
     position: relative;
     
-    font-size: 2vh;
+    font-size: 2rem;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 }
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transform: translateY(-0.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
 }
 
 .btn-white{
