@@ -2,10 +2,10 @@
 $color-primary: #55c57a;
 $color-secondary: #FF0000;
 
-$color-primary-light: lighten($color-primary);
-$color-primary-dark: darken($color-primary);
-$color-secondary-light: lighten($color-secondary);
-$color-secondary-dark: darken($color-secondary);
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+$color-secondary-light: lighten($color-secondary, 10%);
+$color-secondary-dark: darken($color-secondary, 10%);
 
 //Gradient Colours
 $color-grad-topleft: $color-secondary;

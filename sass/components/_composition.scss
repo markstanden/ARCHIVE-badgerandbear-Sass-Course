@@ -1,0 +1,29 @@
+.composition {
+    position: relative;
+
+    &__photo{
+        width: 60%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+        border-radius: .5rem;
+        position: absolute;
+
+        &--p1{
+            left: 0;
+            top: -2rem;
+        }
+
+        &--p2{
+            left: 25rem;
+            top: 5rem;
+        }
+
+        &--p3{
+            left: 10rem;
+            top: 20rem;
+        }
+
+        &:hover {
+        transform: scale(1.4);
+        }
+    }
+}

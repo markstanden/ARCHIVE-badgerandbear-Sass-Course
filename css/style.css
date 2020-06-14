@@ -175,6 +175,25 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 60%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: .5rem;
+    position: absolute; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      left: 25rem;
+      top: 5rem; }
+    .composition__photo--p3 {
+      left: 10rem;
+      top: 20rem; }
+    .composition__photo:hover {
+      transform: scale(1.4); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
