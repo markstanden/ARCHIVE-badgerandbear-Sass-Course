@@ -1,11 +1,19 @@
+//Site theme colours
 $color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+$color-secondary: #FF0000;
 
-$color-hero-topleft: #FF0000;
-$color-hero-bottomright:#38b428;
+$color-primary-light: lighten($color-primary);
+$color-primary-dark: darken($color-primary);
+$color-secondary-light: lighten($color-secondary);
+$color-secondary-dark: darken($color-secondary);
+
+//Gradient Colours
+$color-grad-topleft: $color-secondary;
+$color-grad-bottomright:$color-primary;
 $hero-transparency: 0.8;
 
+//General Colours
+$color-grey-light-1: rgb(233, 229, 229);
 $color-grey-dark: #777;
 $color-white: #FFF;
 $color-black: #000;
@@ -14,3 +22,9 @@ $color-black: #000;
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
+//Font
+$font-size-heading-primary: 6rem;
+$font-size-heading-secondary: 4.5rem;
+$font-size-heading-tertiary: 1.7rem;
+$font-size-default: 1.5rem;
