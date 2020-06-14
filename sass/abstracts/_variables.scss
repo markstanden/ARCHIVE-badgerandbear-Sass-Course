@@ -1,6 +1,6 @@
 //Site theme colours
-$color-primary: #55c57a;
-$color-secondary: #FF0000;
+$color-primary: #0ba03d;
+$color-secondary: rgb(212, 24, 24);
 
 $color-primary-light: lighten($color-primary, 10%);
 $color-primary-dark: darken($color-primary, 10%);
@@ -13,7 +13,7 @@ $color-grad-bottomright:$color-primary;
 $hero-transparency: 0.8;
 
 //General Colours
-$color-grey-light-1: rgb(233, 229, 229);
+$color-grey-light-1: rgb(255, 255, 255);
 $color-grey-dark: #777;
 $color-white: #FFF;
 $color-black: #000;
