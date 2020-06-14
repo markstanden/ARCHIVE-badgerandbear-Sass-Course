@@ -1,6 +1,35 @@
-/**************
-* Basic reset *
-***************/
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fadeInStationary {
+  0% {
+    opacity: 0;
+    transform: translate(0); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -11,47 +40,15 @@
 body {
   box-sizing: border-box; }
 
-/***********************************
-* Root font size for responiveness *
-***********************************/
 html {
-  font-size: 62.5%;
-  /* Default 10px; */
-  /* font-size: 31.5%; */ }
+  font-size: 62.5%; }
 
-/**********
-* General *
-***********/
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
   padding: 3rem; }
-
-/*************
-* Hero Image *
-**************/
-.header {
-  height: 98vh;
-  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.8), rgba(56, 180, 40, 0.8)), url(../img/BB_outdoors01.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 8rem;
-    border-radius: 50%; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
 
 .heading-primary {
   color: #FFF;
@@ -122,37 +119,46 @@ body {
   animation: fadeInUp 3s ease 2s;
   animation-fill-mode: backwards; }
 
-/*************
-* Animations *
-**************/
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.row {
+  max-width: 114rem;
+  background-color: #ddd;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+    background-color: orange;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-3 {
+    width: calc((100% - (6rem*2) / 3));
+    background-color: orangered;
+    float: left; }
+    .row .col-1-of-3:not(:last-child) {
+      margin-right: 6rem; }
 
-@keyframes fadeInStationary {
-  0% {
-    opacity: 0;
-    transform: translate(0); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.header {
+  height: 98vh;
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.8), rgba(56, 180, 40, 0.8)), url(../img/BB_outdoors01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 8rem;
+    border-radius: 50%; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
