@@ -80,7 +80,7 @@ body {
   font-size: 4.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to bottom right, #d41818, #0ba03d);
+  background-image: linear-gradient(to right, red, orange, #c9c904, green, blue, indigo, violet);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -99,6 +99,12 @@ body {
   font-size: 1.5rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
+
+.rainbow {
+  background-image: linear-gradient(to right, red, orange, #c9c904, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
 
 .u-center-text {
   text-align: center; }
@@ -175,6 +181,71 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  -webkit-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card__side {
+    background-color: #FFF;
+    height: 50rem;
+    transition: all 0.6s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25); }
+    .card__side--back {
+      transform: rotateY(-180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to bottom right, #ff8080, red); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to bottom right, #39f177, #0ba03d); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to bottom right, #9403ff, indigo); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+  .card__picture {
+    height: 23rem;
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to top left, white, #ff8080), url(../img/card-cubs.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to top left, #b0fac9, #39f177), url(../img/card-mama.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to top left, #ca82ff, #9403ff), url(../img/card-pants.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #FFF;
+    position: absolute;
+    top: 15rem;
+    right: 1rem;
+    width: 75%; }
+  .card__heading-span {
+    width: 10%;
+    padding: 1rem 1.5rem; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 128, 128, 0.75), rgba(255, 0, 0, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(57, 241, 119, 0.75), rgba(11, 160, 61, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(148, 3, 255, 0.75), rgba(75, 0, 130, 0.85)); }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -201,6 +272,26 @@ body {
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  height: 45rem; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, red, orange, #c9c904, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: transform 1s; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.1); }
 
 .row {
   max-width: 114rem;
@@ -234,11 +325,13 @@ body {
 
 .header {
   height: 98vh;
-  background-image: linear-gradient(to bottom right, rgba(212, 24, 24, 0.8), rgba(11, 160, 61, 0.8)), url(../img/BB_outdoors01.jpg);
+  margin-bottom: 20rem;
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.6), rgba(11, 160, 61, 0.6)), url(../img/BB_outdoors01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative; }
+  position: relative;
+  border-radius: 3.5rem; }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -254,6 +347,20 @@ body {
     text-align: center; }
 
 .section-about {
-  background-color: white;
-  padding: 25rem 0;
-  margin-top: -5vh; }
+  background-color: #e6f6e4;
+  margin-top: -5vh;
+  margin-bottom: 20rem; }
+
+.section-features {
+  padding: 20rem 0;
+  margin-bottom: 20rem;
+  background-size: cover;
+  background-position: top;
+  border-radius: 3.5rem;
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.6), rgba(11, 160, 61, 0.6)), url(../img/BB_outdoors02.jpg); }
+
+.section-best {
+  margin-bottom: 20rem;
+  background-color: #e6f6e4;
+  border-radius: 3.5rem;
+  height: 80rem; }

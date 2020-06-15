@@ -1,0 +1,114 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    -webkit-perspective: 150rem;
+    
+    position: relative;
+
+    //prevents collapse of parent card block due to content being taken out of normal flow.
+    //required for perspective of card flipping
+    height: $height-flipcards;
+    
+    &__side {
+        background-color: $color-white;
+        height: $height-flipcards;
+        transition: all 0.6s ease;
+        //display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        //prevent the reversed card being shown
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+
+        border-radius: $border-radius-medium;
+        overflow: hidden;
+        //box-shadow: x y blur color
+        box-shadow: 0 2.5rem 4rem rgba($color-black, .25);
+
+        &--back {
+            transform: rotateY(-180deg);
+
+            &-1 {
+                background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary);
+            }
+            &-2 {
+                background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary);
+            }
+            &-3 {
+                background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary);
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    //front side styling
+    &__picture {
+        height: 23rem;
+        background-size: cover;
+        background-position: top;
+        background-blend-mode: color;
+
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
+        &--1 {
+            background-image: linear-gradient(to top left, lighten($color-secondary-light, $card-adjustment), lighten($color-secondary, $card-adjustment)),
+            url(../img/card-cubs.jpg);
+        }
+        &--2 {
+            background-image: linear-gradient(to top left, lighten($color-primary-light, $card-adjustment), lighten($color-primary, $card-adjustment)),
+            url(../img/card-mama.jpg);
+        }
+        &--3 {
+            background-image: linear-gradient(to top left, lighten($color-tertiary-light, $card-adjustment), lighten($color-tertiary, $card-adjustment)),
+            url(../img/card-pants.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 15rem;
+        right: 1rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        width: 10%;
+        padding: 1rem 1.5rem;
+        &--1{
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-secondary-light, 0.75),
+                rgba($color-secondary, 0.85))
+        }
+
+        &--2{
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.75),
+                rgba($color-primary, 0.85))
+        }
+
+        &--3{
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-tertiary-light, 0.75),
+                rgba($color-tertiary, 0.85))
+        }
+    }
+}

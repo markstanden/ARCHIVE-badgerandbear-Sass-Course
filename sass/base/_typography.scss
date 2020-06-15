@@ -51,7 +51,7 @@ body {
     font-size: $font-size-heading-secondary;
     text-transform: uppercase;
     font-weight: 700;
-    background-image: linear-gradient(to bottom right, $color-grad-topleft, $color-grad-bottomright);
+    background-image: linear-gradient(to right, $rainbow);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -77,3 +77,10 @@ body {
         margin-bottom: 3rem;
     }
 }
+
+.rainbow {
+    background-image: linear-gradient(to right, $rainbow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }

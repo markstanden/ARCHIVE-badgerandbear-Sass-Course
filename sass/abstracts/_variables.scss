@@ -1,22 +1,41 @@
 //Site theme colours
 $color-primary: #0ba03d;
-$color-secondary: rgb(212, 24, 24);
+$color-secondary: rgb(255, 0, 0);
+$color-tertiary: indigo;
+$rainbow: red, orange,rgb(201, 201, 4),green, blue, indigo, violet;
 
-$color-primary-light: lighten($color-primary, 10%);
-$color-primary-dark: darken($color-primary, 10%);
-$color-secondary-light: lighten($color-secondary, 10%);
-$color-secondary-dark: darken($color-secondary, 10%);
+$colour-range: 25%;
+$card-adjustment: 25%;
+$color-primary-light: lighten($color-primary, $colour-range);
+$color-primary-dark: darken($color-primary, $colour-range);
+$color-secondary-light: lighten($color-secondary, $colour-range);
+$color-secondary-dark: darken($color-secondary, $colour-range);
+$color-tertiary-light: lighten($color-tertiary, $colour-range);
+$color-tertiary-dark: darken($color-tertiary, $colour-range);
 
 //Gradient Colours
 $color-grad-topleft: $color-secondary;
 $color-grad-bottomright:$color-primary;
-$hero-transparency: 0.8;
+$hero-transparency: 0.6;
 
 //General Colours
-$color-grey-light-1: rgb(255, 255, 255);
+$color-grey-light-1: rgb(187, 185, 185);
 $color-grey-dark: #777;
 $color-white: #FFF;
 $color-black: #000;
+
+//section variables
+$color-background-margin: $color-white;
+//$color-background-sections: $color-white;
+$color-background-sections: rgb(230, 246, 228);
+$color-background-sections-alternate: darken($color-background-sections, 10%);
+$margin-section-floor: 20rem;
+
+$border-radius-large: 3.5rem;
+$border-radius-medium: 2.5rem;
+$border-radius-small: 1.5rem;
+
+
 
 // Grid Layout
 $grid-width: 114rem;
@@ -28,3 +47,6 @@ $font-size-heading-primary: 6rem;
 $font-size-heading-secondary: 4.5rem;
 $font-size-heading-tertiary: 1.7rem;
 $font-size-default: 1.5rem;
+
+//cards
+$height-flipcards: 50rem;
