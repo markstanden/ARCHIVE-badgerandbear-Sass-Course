@@ -27,3 +27,10 @@
     //background-image: linear-gradient(to bottom right, rgba($color-grad-topleft, $hero-transparency), rgba($color-grad-bottomright, $hero-transparency));
     border-radius: $border-radius-large;
 }
+
+.section-stories {
+    padding: 5rem 0;
+    margin-bottom: $margin-section-floor;
+    background-color: $color-background-sections;
+    border-radius: $border-radius-large;
+}
