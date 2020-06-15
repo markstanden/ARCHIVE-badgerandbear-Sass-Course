@@ -49,6 +49,16 @@
         }
     }
 
+    &--primary{
+        background-color: $color-primary;
+        color: $color-white;
+
+         
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
     &--animated{
         backface-visibility: hidden;
         animation: fadeInUp 3s ease 2s;

@@ -60,6 +60,8 @@
 
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        border-top-left-radius: $border-radius-medium;
+        border-top-right-radius: $border-radius-medium;
 
         &--1 {
             background-image: linear-gradient(to top left, lighten($color-secondary-light, $card-adjustment), lighten($color-secondary, $card-adjustment)),
@@ -111,4 +113,53 @@
                 rgba($color-tertiary, 0.85))
         }
     }
+
+    &__details {
+
+        padding: 3rem;
+        width: 80%;
+        margin: 0 auto;
+
+        ul {
+            margin: 0 auto;
+            list-style: none;
+            width: 80%;
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-1;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box{
+        text-align: center;
+        color: $color-white;
+
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 8rem;
+        font-weight: 200;
+    }
+
 }

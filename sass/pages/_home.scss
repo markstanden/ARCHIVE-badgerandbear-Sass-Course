@@ -1,11 +1,12 @@
 .section-about {
+    padding: 5rem 0 15rem 0;
     background-color: $color-background-sections;
-    margin-top: -5vh;
     margin-bottom: $margin-section-floor;
+    border-radius: $border-radius-large;
 }
 
 .section-features {
-    padding: 20rem 0;
+    padding: 8rem 0 8rem 0;
     margin-bottom: $margin-section-floor;
     background-size: cover;
     background-position: top;
@@ -20,9 +21,9 @@
 }
 
 .section-best {
+    padding: 5rem 0 7rem 0;
     margin-bottom: $margin-section-floor;
     background-color: $color-background-sections;
     //background-image: linear-gradient(to bottom right, rgba($color-grad-topleft, $hero-transparency), rgba($color-grad-bottomright, $hero-transparency));
     border-radius: $border-radius-large;
-    height: 80rem;
 }
