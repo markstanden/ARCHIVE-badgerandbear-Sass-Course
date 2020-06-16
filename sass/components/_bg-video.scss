@@ -6,6 +6,7 @@
     width: 100%;
     z-index: -1;
     opacity: 0.35;
+    border-radius: $border-radius-large;
     overflow: hidden;
 
     &__content {
