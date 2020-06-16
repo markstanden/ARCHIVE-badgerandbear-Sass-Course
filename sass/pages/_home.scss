@@ -31,6 +31,8 @@
 .section-stories {
     padding: 5rem 0;
     margin-bottom: $margin-section-floor;
-    background-color: $color-background-sections;
+    //background-color: $color-background-sections;
     border-radius: $border-radius-large;
+    position: relative; //for video background.
+
 }
