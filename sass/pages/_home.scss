@@ -39,11 +39,11 @@
 
 .section-book {
     padding: 5rem 0 15rem 0;
-    background-image: linear-gradient(
-        to bottom right,
-        rgba($color-grad-topleft, $hero-transparency),
-        rgba($color-grad-bottomright, $hero-transparency)
-    );
+    // background-image: linear-gradient(
+    //     to bottom right,
+    //     rgba($color-grad-topleft, $hero-transparency),
+    //     rgba($color-grad-bottomright, $hero-transparency)
+    // );
     margin-bottom: $margin-section-floor;
     border-radius: $border-radius-large;
 }
