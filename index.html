@@ -16,7 +16,9 @@
 <body>
     <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navigation__button">MENU</label>
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
         <div class="navigation__background">&nbsp;</div>
         <div class="navigation__nav">
             <ul class="navigation__list">
@@ -41,7 +43,7 @@
                 <span class='heading-primary--main heading-primary--main--2'>and</span>
                 <span class='heading-primary--main heading-primary--main--3'>Bear</span>
             </h1>
-            <a href='#' class='btn--animated btn btn--white'>Spark Joy</a>
+            <a href='#section-best' class='btn--animated btn btn--white'>Spark Joy</a>
         </div> <!-- header__text-box -->
     </header> <!-- header -->
     <main>
@@ -85,7 +87,7 @@
             </div>
         </section> <!-- section-features -->
 
-        <section class='section-best'>
+        <section class='section-best' id='section-best'>
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">Best Selling</h2>
             </div>
@@ -118,7 +120,7 @@
                                     <p class="card__price-only">from</p>
                                     <p class="card__price-value">£20</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Show Me!</a>
+                                <a href="#popup" class="btn btn--white">Show Me!</a>
                             </div>
                         </div>
                     </div>
@@ -150,7 +152,7 @@
                                     <p class="card__price-only">from</p>
                                     <p class="card__price-value">£40</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Show Me!</a>
+                                <a href="#popup" class="btn btn--white">Show Me!</a>
                             </div>
                         </div>
                     </div>
@@ -180,7 +182,7 @@
                                     <p class="card__price-only">Monthly</p>
                                     <p class="card__price-value">£7.50</p>
                                 </div>
-                                <a href="#" class="btn btn--white">YES!</a>
+                                <a href="#popup" class="btn btn--white">YES!</a>
                             </div>
                         </div>
                     </div>
@@ -369,9 +371,24 @@
         </div>
         
     </footer>
-    
-    <footer>
-    </footer>
+   
+    <div class="popup" id='popup'>
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/popup-01.jpg" alt="clothing Photo 1 - Cubs" class="popup__img">
+                <img src="img/popup-02.jpg" alt="Clothing Photo 2 - Mama" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-best" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start ordering Now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before confirming purchase</h3>
+                <p class="popup__text ">
+                    I'm baby tousled vinyl beard intelligentsia drinking vinegar. Microdosing plaid narwhal fam disrupt pok pok pug shaman beard brunch. Chillwave literally gochujang intelligentsia post-ironic YOLO neutra, mustache asymmetrical truffaut knausgaard beard blog woke snackwave. Pitchfork affogato +1 tbh, selvage freegan ugh. Pickled banjo copper mug typewriter raw denim, whatever bespoke meh. Biodiesel small batch marfa chambray neutra.
+                </p>
+                <a href="#" class="btn btn--primary">Order Now</a>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>

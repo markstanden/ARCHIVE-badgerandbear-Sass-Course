@@ -11,13 +11,7 @@
     background-size: cover;
     background-position: top;
     border-radius: $border-radius-large;
-    background-image: linear-gradient(
-            to bottom right,
-            rgba($color-grad-topleft, $hero-transparency),
-            rgba($color-grad-bottomright, $hero-transparency)
-        ),
-        url(../img/BB_outdoors02.jpg
-    );
+    background-image: url(../img/features-background.jpg);
 }
 
 .section-best {
