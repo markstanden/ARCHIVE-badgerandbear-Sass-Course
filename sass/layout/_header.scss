@@ -8,6 +8,10 @@
     background-position: center;
     position: relative;
     border-radius: $border-radius-large;
+    
+    @include respond(tab-port){
+        margin-bottom: $margin-section-floor-small;
+    }
 
     &__logo-box {
         position: absolute;
