@@ -570,6 +570,9 @@ body {
     @media (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row::after {
     content: "";
     display: table;
@@ -580,7 +583,8 @@ body {
       margin-right: 6rem; }
       @media (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
-          margin-right: 0; } }
+          margin-right: 0rem;
+          margin-bottom: 6rem; } }
     @media (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
@@ -609,24 +613,32 @@ body {
   height: 8rem;
   width: 8rem;
   position: fixed;
-  top: 4rem;
-  right: 4rem;
+  top: 7rem;
+  right: 7rem;
   border-radius: 50%;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: button; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
 
 .navigation__background {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
   position: fixed;
-  top: 4.5rem;
-  right: 4.5rem;
+  top: 7.5rem;
+  right: 7.5rem;
   background-image: radial-gradient(#39f177, #0ba03d);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.67, 0.89, 0.87, 0.31); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
 
 .navigation__nav {
   height: 100vh;

@@ -9,8 +9,16 @@
         height: 8rem;
         width: 8rem;
         position: fixed;
-        top: 4rem;
-        right: 4rem;
+        
+        top: 7rem;
+        right: 7rem;
+
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+        
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
@@ -23,8 +31,13 @@
         width: 6rem;
         border-radius: 50%;
         position: fixed;
-        top: 4.5rem;
-        right: 4.5rem;
+        top: 7.5rem;
+        right: 7.5rem;
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
         background-image: radial-gradient($color-primary-light, $color-primary);
         z-index: 1000;
         transition: transform 0.8s cubic-bezier(.67,.89,.87,.31);

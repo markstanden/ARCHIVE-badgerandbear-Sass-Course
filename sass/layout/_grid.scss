@@ -10,7 +10,9 @@
             margin-bottom: $gutter-vertical-small;
         }
     }
-
+    @include respond(tab-port) {
+        max-width: 50rem;
+    }
     @include clearfix;
 
     [class^="col-"] {
@@ -20,7 +22,9 @@
             margin-right: $gutter-horizontal;
 
             @include respond(tab-port) {
-                margin-right: 0;
+                margin-right: 0rem;;
+                margin-bottom: $gutter-vertical-small;
+
             }
         }
 
