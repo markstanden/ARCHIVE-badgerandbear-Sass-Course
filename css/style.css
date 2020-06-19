@@ -799,7 +799,6 @@ body {
     display: table-cell; }
   .popup__img {
     width: 100%;
-    height: 50%;
     object-fit: cover; }
   .popup__right {
     width: 66.666667%;
