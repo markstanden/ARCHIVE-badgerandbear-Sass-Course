@@ -56,16 +56,16 @@ body {
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 600px) {
+  @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 900px) {
-    html {
-      font-size: 60%; } }
-  @media (max-width: 1200px) {
+  @media (max-width: 90rem) {
     html {
       font-size: 70%; } }
-  @media (min-width: 1800px) {
+  @media (max-width: 75rem) {
+    html {
+      font-size: 100%; } }
+  @media (min-width: 180rem) {
     html {
       font-size: 120%; } }
 
