@@ -11,6 +11,9 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER of responsive tweaking:
+base + typography > general layout > grid > page layout > components
 */
 @keyframes fadeInLeft {
   0% {
@@ -51,30 +54,30 @@ $breakpoint argument choices:
   padding: 0;
   box-sizing: inherit; }
 
-body {
-  box-sizing: border-box; }
-
 html {
   font-size: 62.5%; }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 31.25%; } }
-  @media (max-width: 90rem) {
-    html {
-      font-size: 50%; } }
   @media (max-width: 75rem) {
     html {
       font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
   @media (min-width: 180rem) {
     html {
       font-size: 75%; } }
 
 body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #FFF;
@@ -88,6 +91,10 @@ body {
     text-align: center;
     backface-visibility: hidden;
     animation-duration: 3s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
     .heading-primary--main--1 {
       animation-name: fadeInLeft; }
       .heading-primary--main--1:hover {
@@ -112,6 +119,12 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: scale(1.02);
     text-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.2); }
@@ -584,11 +597,11 @@ body {
 
 .navigation__button {
   background-color: #FFF;
-  height: 7rem;
-  width: 7rem;
+  height: 8rem;
+  width: 8rem;
   position: fixed;
-  top: 6rem;
-  right: 6rem;
+  top: 4rem;
+  right: 4rem;
   border-radius: 50%;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
@@ -600,8 +613,8 @@ body {
   width: 6rem;
   border-radius: 50%;
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 4.5rem;
+  right: 4.5rem;
   background-image: radial-gradient(#39f177, #0ba03d);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.67, 0.89, 0.87, 0.31); }
@@ -661,7 +674,7 @@ body {
 
 .navigation__icon {
   position: relative;
-  margin-top: 3.4rem; }
+  margin-top: 3.8rem; }
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 3rem;
     height: 2px;

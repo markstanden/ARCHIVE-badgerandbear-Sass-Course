@@ -32,7 +32,11 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER of responsive tweaking:
+base + typography > general layout > grid > page layout > components
 */
+
 
 @mixin respond($breakpoint) {
 
@@ -42,8 +46,8 @@ $breakpoint argument choices:
     }
 
     @if $breakpoint == tab-port {
-        //900px/16px = 56.25.5em
-        @media (max-width: 90rem) { @content };
+        //900px/16px = 56.25em
+        @media (max-width: 56.25em) { @content };
     }
 
     @if $breakpoint == tab-land {
