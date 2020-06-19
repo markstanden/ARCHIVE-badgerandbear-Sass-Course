@@ -1,3 +1,10 @@
+/* 
+0 - 600px phone
+600 - 900 Tablet portrait
+900 - 1200 tablet landscape
+1200-1800 normal styles apply
+1800px big desktop
+*/
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -42,6 +49,9 @@ body {
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
@@ -733,7 +743,7 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: translate -50%, -50% scale(0.5);
-    transition: all 0.10s .1s; }
+    transition: all 0.130s .1s; }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
