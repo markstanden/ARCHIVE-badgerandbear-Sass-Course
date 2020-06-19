@@ -12,18 +12,22 @@ body{
 
 // Root font size for responiveness
 html{
-    font-size: 62.5%; // Default 10px;
+    font-size: 62.5%; // Our default: 1 rem = 10px;
 
     @include respond(phone) {
-        font-size: 50%;
+        // 1 rem = 5px, 5/16= 31.25%
+        font-size: 31.25%;
     }
     @include respond(tab-port) {
-        font-size: 70%;
+        // 1 rem = 8px, 8/16= 50%
+        font-size: 50%;
     }
     @include respond(tab-land) {
-        font-size: 100%;
+        // 1 rem = 9px, 9/16= 56.25%
+        font-size: 56.25%;
     }
     @include respond(big-desktop) {
-        font-size: 120%;
+        // 1 rem = 12px, 12/16= 75% (scaling up)
+        font-size: 75%;
     }
 }

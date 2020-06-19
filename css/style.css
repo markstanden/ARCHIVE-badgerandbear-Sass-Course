@@ -58,16 +58,16 @@ html {
   font-size: 62.5%; }
   @media (max-width: 37.5em) {
     html {
-      font-size: 50%; } }
+      font-size: 31.25%; } }
   @media (max-width: 90rem) {
     html {
-      font-size: 70%; } }
+      font-size: 50%; } }
   @media (max-width: 75rem) {
     html {
-      font-size: 100%; } }
+      font-size: 56.25%; } }
   @media (min-width: 180rem) {
     html {
-      font-size: 120%; } }
+      font-size: 75%; } }
 
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
