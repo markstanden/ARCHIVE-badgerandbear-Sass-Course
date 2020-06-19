@@ -23,6 +23,19 @@
 1800px big desktop
 */
 
-@mixin respond-phone {
-    @media (max-width: 600px) { @content };
+// @mixin respond-phone {
+//     @media (max-width: 600px) { @content };
+// }
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 600px) { @content };
+    }
 }

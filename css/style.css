@@ -5,6 +5,13 @@
 1200-1800 normal styles apply
 1800px big desktop
 */
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
