@@ -8,16 +8,16 @@
         background-color: $color-white;
         height: 8rem;
         width: 8rem;
+        @include respondMaxPX(900) { height: 6rem; width: 6rem; };
+        @include respondMaxPX(600) { height: 4rem; width: 4rem; };
         position: fixed;
         
         top: 7rem;
         right: 7rem;
 
-
-        @include respond(tab-port) {
-            top: 4rem;
-            right: 4rem;
-        }
+        @include respondMaxPX(900) { top: 3rem; right: 3rem; };
+        @include respondMaxPX(600) { top: 2rem; right: 2rem; };
+        
         
         border-radius: 50%;
         z-index: 2000;
@@ -29,14 +29,15 @@
     &__background {
         height: 6rem;
         width: 6rem;
+        @include respondMaxPX(900) { height: 5rem; width: 5rem; };
+        @include respondMaxPX(600) { height: 3rem; width: 3rem; };
+
         border-radius: 50%;
         position: fixed;
         top: 7.5rem;
         right: 7.5rem;
-        @include respond(tab-port) {
-            top: 4.5rem;
-            right: 4.5rem;
-        }
+        @include respondMaxPX(900) { top: 3.5rem; right: 3.5rem; };
+        @include respondMaxPX(600) { top: 2.5rem; right: 2.5rem; };
 
         background-image: radial-gradient($color-primary-light, $color-primary);
         z-index: 1000;
@@ -120,6 +121,8 @@
     &__icon{
         position: relative;
         margin-top: 3.8rem;
+        @include respondMaxPX(900) { margin-top: 2.8rem; };
+        @include respondMaxPX(600) { margin-top: 1.9rem; };
 
         &,
         &::before,

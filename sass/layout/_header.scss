@@ -17,18 +17,19 @@
         position: absolute;
         top: 4rem;
         left: 4rem;
+        @include respondMaxPX(900) { top: 3rem; left: 3rem; };
+        @include respondMaxPX(600) { top: 2rem; left: 2rem; };
     }
     
     &__logo {
         height: 8rem;
+        @include respondMaxPX(900) { height: 7rem; };
+        @include respondMaxPX(600) { height: 6rem; };
         border-radius: 50%;
     }
     
     &__text-box{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        @include absCentre;
         text-align: center;
     }
 
