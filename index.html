@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/icon-font-basic.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="/img/BB_hero.jpg">
+    <link rel="shortcut icon" type="image/png" href="/img/bb-main--icon.jpg">
     
     <title>Badger and Bear</title>
 </head>
@@ -337,8 +337,12 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img class="footer__logo" srcset="img/bb-main--25pc.jpg 1x, img/bb-main--50pc.jpg 2x" alt="Badger and Bear Logo">
-        </div>
+            <picture class="footer__logo">
+                <source srcset="img/bb-main--25pc.jpg"
+                    media="(max-width: 37.5em)">
+                <img srcset="img/bb-main--25pc.jpg 1x, img/bb-main--50pc.jpg 2x" alt="Badger and Bear Logo">
+            </picture>
+            </div>
         
         <div class="row">
             <div class="col-1-of-2"> <!-- LHS column -->
