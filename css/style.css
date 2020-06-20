@@ -638,7 +638,11 @@ body {
     @media (max-width: 56.25em) {
       .footer__logo-box {
         margin-bottom: 5rem; } }
-  .footer__logo {
+  .footer__logo source {
+    width: 35rem;
+    height: auto;
+    border-radius: 50%; }
+  .footer__logo img {
     width: 35rem;
     height: auto;
     border-radius: 50%; }

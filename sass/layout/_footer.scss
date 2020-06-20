@@ -18,9 +18,18 @@
     }
 
     &__logo {
-        width: 35rem;
-        height: auto;
-        border-radius: 50%;
+
+        source {
+            width: 35rem;
+            height: auto;
+            border-radius: 50%;
+        }
+        img {
+            width: 35rem;
+            height: auto;
+            border-radius: 50%;
+        }
+
     }
  
     &__navigation {
