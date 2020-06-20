@@ -13,6 +13,8 @@
         background-color: $color-white;
         height: $height-flipcards;
         transition: all 0.6s ease;
+        @include respond(tab-port) { transition: none; }
+
         //display: block;
         position: absolute;
         top: 0;

@@ -70,19 +70,31 @@
         105deg,
         rgba($color-white, .9) 0%,
         rgba($color-white, .9), 55%,
-        transparent 60%)
-        , url(../img/card-mama.jpg);
-    background-size: 100%;
+        transparent 60%),
+        url(../img/card-mama.jpg
+    );
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: $border-radius-small;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
     
-    @include respondMinPX (750) {
+    @include respondMaxPX (750) {
         padding: 1rem;
+        background-image: linear-gradient(
+            105deg,
+            rgba($color-white, .9) 0%,
+            rgba($color-white, .9), 65%,
+            transparent 70%),
+            url(../img/card-mama.jpg
+        );
     }
 
     &__form {
         width: 50%;
         padding: 6rem;
+        @include respondMaxPX (750) { 
+            width: 65%;
+            padding: 2rem;
+        }
     }
 }

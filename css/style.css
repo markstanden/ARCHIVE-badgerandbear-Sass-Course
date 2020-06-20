@@ -192,6 +192,9 @@ body {
   font-size: 2rem;
   border: none;
   cursor: pointer; }
+  @media (max-width: 46.875em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: 1.5rem; } }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -274,6 +277,9 @@ body {
     border-radius: 2.5rem;
     overflow: hidden;
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25); }
+    @media (max-width: 56.25em) {
+      .card__side {
+        transition: none; } }
     .card__side--back {
       transform: rotateY(-180deg); }
       .card__side--back-1 {
@@ -997,13 +1003,18 @@ body {
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9), 55%, transparent 60%), url(../img/card-mama.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
-  @media (min-width: 46.875em) {
+  @media (max-width: 46.875em) {
     .book {
-      padding: 1rem; } }
+      padding: 1rem;
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9), 65%, transparent 70%), url(../img/card-mama.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 46.875em) {
+      .book__form {
+        width: 65%;
+        padding: 2rem; } }
