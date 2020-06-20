@@ -7,8 +7,18 @@
     padding: 6rem;
     padding-left: 9rem;
     font-size: $font-size-default;
-    transform: skewX(-12deg);
-    height: 27rem;
+    transform: skewX(-8deg);
+    min-height: 27rem;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respondMaxPX(500) {
+        transform: skewX(0deg);
+    }
 
     &__shape {
         width: 15rem;
@@ -18,18 +28,31 @@
         shape-outside: circle(50% at 50% 50%);
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        transform: translateX(-3rem) skewX(12deg);
+        transform: translateX(-3rem) skewX(8deg);
         position: relative;
+
+        @include respondMaxPX(500) {
+            transform: translateX(-3rem) skewX(0deg);
+        }
+      
     }
     &__img {
         height: 100%;
         transform: scale(1);
 
         transition: all 2s;
+        
+        @include respondMaxPX(500) {
+            transform: skewX(0deg);
+        }
     }
 
     &__text {
-        transform: skewX(12deg);
+        transform: skewX(8deg);
+        
+        @include respondMaxPX(500) {
+            transform: skewX(0deg);
+        }
     }
 
     &__caption{

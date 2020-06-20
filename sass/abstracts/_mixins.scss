@@ -37,6 +37,12 @@ ORDER of responsive tweaking:
 base + typography > general layout > grid > page layout > components
 */
 
+@mixin respondMaxPX($px) {
+    @media (max-width: #{$px/16}em) { @content };
+}
+@mixin respondMinPX($px) {
+    @media (min-width: #{$px/16}em) { @content };
+}
 
 @mixin respond($breakpoint) {
 

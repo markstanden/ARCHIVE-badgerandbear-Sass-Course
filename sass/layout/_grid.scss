@@ -11,13 +11,12 @@
         }
     }
     @include respond(tab-port) {
-        max-width: 50rem;
-        padding: 0 5rem;
-    }
-    @include respond(phone) {
         width: 100%;
-        padding: 0.5rem;
+        padding: 0.5rem 5rem;
     }
+
+    @include respondMaxPX(800) { padding: 3rem; }
+    @include respondMaxPX(600) { padding: 0.5rem; }
     @include clearfix;
 
     [class^="col-"] {

@@ -354,7 +354,9 @@ body {
     .card {
       height: auto;
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25);
-      width: 100%; }
+      max-width: 60rem;
+      margin-left: auto;
+      margin-right: auto; }
       .card__heading-span {
         hyphens: auto;
         padding: 0.5rem; }
@@ -390,7 +392,7 @@ body {
       .card__price-box {
         margin-bottom: 3rem; }
       .card__price-value {
-        font-size: 6rem; } }
+        font-size: 4rem; } }
 
 .composition {
   position: relative; }
@@ -448,6 +450,9 @@ body {
   height: 45rem; }
   @media (max-width: 56.25em) {
     .feature-box {
+      max-width: 60rem;
+      margin-left: auto;
+      margin-right: auto;
       padding: 2rem; } }
   .feature-box__icon {
     font-size: 6rem;
@@ -511,6 +516,10 @@ body {
   width: 49%;
   display: inline-block;
   position: relative; }
+  @media (max-width: 46.875em) {
+    .form__radio-group {
+      width: 100%;
+      margin-top: 1.5rem; } }
 
 .form__radio-input {
   display: none; }
@@ -555,8 +564,16 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.5rem;
-  transform: skewX(-12deg);
-  height: 27rem; }
+  transform: skewX(-8deg);
+  min-height: 27rem; }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 31.25em) {
+    .story {
+      transform: skewX(0deg); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -565,14 +582,23 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(8deg);
     position: relative; }
+    @media (max-width: 31.25em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0deg); } }
   .story__img {
     height: 100%;
     transform: scale(1);
     transition: all 2s; }
+    @media (max-width: 31.25em) {
+      .story__img {
+        transform: skewX(0deg); } }
   .story__text {
-    transform: skewX(12deg); }
+    transform: skewX(8deg); }
+    @media (max-width: 31.25em) {
+      .story__text {
+        transform: skewX(0deg); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -657,11 +683,13 @@ body {
         margin-bottom: 6rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem;
-      padding: 0 5rem; } }
+      width: 100%;
+      padding: 0.5rem 5rem; } }
+  @media (max-width: 50em) {
+    .row {
+      padding: 3rem; } }
   @media (max-width: 37.5em) {
     .row {
-      width: 100%;
       padding: 0.5rem; } }
   .row::after {
     content: "";
@@ -919,7 +947,8 @@ body {
   border-radius: 3.5rem; }
   @media (max-width: 56.25em) {
     .section-about {
-      padding: 5rem 0;
+      padding: 5rem 2rem;
+      padding-bottom: 10rem;
       margin-bottom: 2rem; } }
 
 .section-features {
@@ -962,12 +991,19 @@ body {
     .section-book {
       padding: 5rem 0;
       margin-bottom: 2rem; } }
+  @media (max-width: 50em) {
+    .section-book {
+      padding: 1rem 0; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9), 55%, transparent 60%), url(../img/card-mama.jpg);
   background-size: 100%;
+  background-repeat: no-repeat;
   border-radius: 1.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (min-width: 46.875em) {
+    .book {
+      padding: 1rem; } }
   .book__form {
     width: 50%;
     padding: 6rem; }

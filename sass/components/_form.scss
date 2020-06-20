@@ -36,12 +36,6 @@
             color: $color-secondary;
         }
 
-        // &:focus:valid{
-        //     border: none;
-        //     border-bottom: 3px solid $color-primary;
-        //     color: $color-primary;
-        // }
-
         &:-moz-ui-invalid {
             box-shadow: none;
         }
@@ -66,6 +60,10 @@
         width: 49%;
         display: inline-block;
         position: relative;
+        @include respondMaxPX(750) {
+            width: 100%;
+            margin-top: 1.5rem;
+        }
     }
 
     &__radio-input{
