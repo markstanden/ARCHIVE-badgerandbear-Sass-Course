@@ -2,7 +2,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     -webkit-perspective: 150rem;
-    
+
     position: relative;
 
     //prevents collapse of parent card block due to content being taken out of normal flow.
@@ -162,4 +162,57 @@
         font-weight: 200;
     }
 
+    @include respond(tab-port) {
+         height: auto;
+         box-shadow: 0 2.5rem 4rem rgba($color-black, .25);
+            
+         
+        
+        &__side {
+            height: auto;
+            background-color: $color-white;
+            position: relative;
+            
+            &--front {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                padding-bottom: 4rem;
+                box-shadow: none;
+            }
+
+            &--back {
+                transform: rotateY(0);
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+                margin-top: -10%;
+                padding-top: 4rem;
+            }
+
+        }
+    
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+    
+        //front side styling
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0;
+            transform: translate(0%);
+            width: 100%;
+            border-radius: none;
+            padding: 4rem;
+            margin-bottom: $gutter-vertical-small;
+        }
+    
+        &__price-box{
+            margin-bottom: 3rem;
+        }
+    
+        &__price-value {
+            font-size: 6rem;
+        }
+    }
 }
