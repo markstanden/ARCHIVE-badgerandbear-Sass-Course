@@ -1,7 +1,14 @@
 .header {
     height: 98vh;
+    padding-top: 10rem;
     margin-bottom: $margin-section-floor;
-    background-image: linear-gradient(to bottom right, rgba($color-grad-topleft, $hero-transparency), rgba($color-grad-bottomright, $hero-transparency)), url(../img/BB_outdoors01.jpg);
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-grad-topleft,
+            $hero-transparency),
+            rgba($color-grad-bottomright,
+            $hero-transparency)
+        ), url(../img/bb-hero--600w.jpg);
     
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,6 +16,17 @@
     position: relative;
     border-radius: $border-radius-large;
     
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (max-resolution: 192dpi) and (min-width: 56.25em) {
+        background-image: linear-gradient(
+        to bottom right,
+        rgba($color-grad-topleft,
+            $hero-transparency),
+            rgba($color-grad-bottomright,
+            $hero-transparency)
+        ), url(../img/bb-hero--full.jpg);
+    }
     @include respond(tab-port){
         margin-bottom: $margin-section-floor-small;
     }

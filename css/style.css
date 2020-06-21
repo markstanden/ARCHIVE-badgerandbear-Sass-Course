@@ -888,13 +888,17 @@ body {
 
 .header {
   height: 98vh;
+  padding-top: 10rem;
   margin-bottom: 15rem;
-  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.6), rgba(11, 160, 61, 0.6)), url(../img/BB_outdoors01.jpg);
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.6), rgba(11, 160, 61, 0.6)), url(../img/bb-hero--600w.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
   border-radius: 3.5rem; }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (max-resolution: 192dpi) and (min-width: 56.25em) {
+    .header {
+      background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.6), rgba(11, 160, 61, 0.6)), url(../img/bb-hero--full.jpg); } }
   @media (max-width: 56.25em) {
     .header {
       margin-bottom: 2rem; } }
@@ -937,6 +941,11 @@ body {
   z-index: 5000;
   opacity: 0;
   visibility: hidden; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.3); } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
