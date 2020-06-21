@@ -16,9 +16,9 @@
     position: relative;
     border-radius: $border-radius-large;
     
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),
-    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-    (max-resolution: 192dpi) and (min-width: 56.25em) {
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (max-resolution: 192dpi) and (min-width: 56.25em) {
         background-image: linear-gradient(
         to bottom right,
         rgba($color-grad-topleft,

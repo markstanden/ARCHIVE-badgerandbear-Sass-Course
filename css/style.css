@@ -56,22 +56,26 @@ base + typography > general layout > grid > page layout > components
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 75rem) {
+  @media only screen and (max-width: 75rem) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 180rem) {
+  @media only screen and (min-width: 180rem) {
     html {
       font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
+
+::selection {
+  background-color: #0ba03d;
+  color: #FFF; }
 
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
@@ -91,7 +95,7 @@ body {
     text-align: center;
     backface-visibility: hidden;
     animation-duration: 3s; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: 1rem;
         font-family: 5rem; } }
@@ -119,10 +123,10 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all .2s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2.5rem; } }
   .heading-secondary:hover {
@@ -150,7 +154,7 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-big {
       margin-bottom: 5rem !important; } }
 
@@ -192,7 +196,7 @@ body {
   font-size: 2rem;
   border: none;
   cursor: pointer; }
-  @media (max-width: 46.875em) {
+  @media only screen and (max-width: 46.875em) {
     .btn, .btn:link, .btn:visited {
       font-size: 1.5rem; } }
 
@@ -277,7 +281,7 @@ body {
     border-radius: 2.5rem;
     overflow: hidden;
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25); }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .card__side {
         transition: none; } }
     .card__side--back {
@@ -356,7 +360,7 @@ body {
   .card__price-value {
     font-size: 8rem;
     font-weight: 200; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25);
@@ -410,7 +414,7 @@ body {
     z-index: 10;
     transition: all .2s;
     outline-offset: 1rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .composition__photo {
         float: left;
         position: relative;
@@ -419,21 +423,21 @@ body {
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
           top: 1rem;
           transform: scale(1.2); } }
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p2 {
           top: 0;
           transform: scale(1.3); } }
     .composition__photo--p3 {
       left: 20%;
       top: 15rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p3 {
           top: 0;
           left: 0;
@@ -454,7 +458,7 @@ body {
   border-radius: 1.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   height: 45rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .feature-box {
       max-width: 60rem;
       margin-left: auto;
@@ -469,7 +473,7 @@ body {
     background-clip: text;
     color: transparent;
     transition: transform 1s; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
         margin: 0; } }
   .feature-box:hover {
@@ -522,7 +526,7 @@ body {
   width: 49%;
   display: inline-block;
   position: relative; }
-  @media (max-width: 46.875em) {
+  @media only screen and (max-width: 46.875em) {
     .form__radio-group {
       width: 100%;
       margin-top: 1.5rem; } }
@@ -572,12 +576,12 @@ body {
   font-size: 1.5rem;
   transform: skewX(-8deg);
   min-height: 27rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       width: 100%;
       padding: 4rem;
       padding-left: 7rem; } }
-  @media (max-width: 31.25em) {
+  @media only screen and (max-width: 31.25em) {
     .story {
       transform: skewX(0deg); } }
   .story__shape {
@@ -590,19 +594,19 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(8deg);
     position: relative; }
-    @media (max-width: 31.25em) {
+    @media only screen and (max-width: 31.25em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0deg); } }
   .story__img {
     height: 100%;
     transform: scale(1);
     transition: all 2s; }
-    @media (max-width: 31.25em) {
+    @media only screen and (max-width: 31.25em) {
       .story__img {
         transform: skewX(0deg); } }
   .story__text {
     transform: skewX(8deg); }
-    @media (max-width: 31.25em) {
+    @media only screen and (max-width: 31.25em) {
       .story__text {
         transform: skewX(0deg); } }
   .story__caption {
@@ -629,13 +633,13 @@ body {
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #e7e7e7; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__logo-box {
         margin-bottom: 5rem; } }
   .footer__logo source {
@@ -650,7 +654,7 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__navigation {
         width: 100%;
         text-align: center; } }
@@ -677,7 +681,7 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: right; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
         text-align: center;
@@ -688,17 +692,17 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       width: 100%;
       padding: 0.5rem 5rem; } }
-  @media (max-width: 50em) {
+  @media only screen and (max-width: 50em) {
     .row {
       padding: 3rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .row {
       padding: 0.5rem; } }
   .row::after {
@@ -709,11 +713,11 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0rem;
           margin-bottom: 6rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
@@ -748,19 +752,19 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: button; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__button {
       height: 6rem;
       width: 6rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__button {
       height: 4rem;
       width: 4rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__button {
       top: 3rem;
       right: 3rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__button {
       top: 2rem;
       right: 2rem; } }
@@ -775,19 +779,19 @@ body {
   background-image: radial-gradient(#39f177, #0ba03d);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.67, 0.89, 0.87, 0.31); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__background {
       height: 5rem;
       width: 5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__background {
       height: 3rem;
       width: 3rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__background {
       top: 3.5rem;
       right: 3.5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__background {
       top: 2.5rem;
       right: 2.5rem; } }
@@ -848,10 +852,10 @@ body {
 .navigation__icon {
   position: relative;
   margin-top: 3.8rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__icon {
       margin-top: 2.8rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation__icon {
       margin-top: 1.9rem; } }
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
@@ -896,31 +900,31 @@ body {
   background-position: center;
   position: relative;
   border-radius: 3.5rem; }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (max-resolution: 192dpi) and (min-width: 56.25em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (max-resolution: 192dpi) and (min-width: 56.25em) {
     .header {
       background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.6), rgba(11, 160, 61, 0.6)), url(../img/bb-hero--full.jpg); } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .header {
       margin-bottom: 2rem; } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .header__logo-box {
         top: 3rem;
         left: 3rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .header__logo-box {
         top: 2rem;
         left: 2rem; } }
   .header__logo {
     height: 8rem;
     border-radius: 50%; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .header__logo {
         height: 7rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .header__logo {
         height: 6rem; } }
   .header__text-box {
@@ -979,28 +983,28 @@ body {
     opacity: 0;
     transform: translate -50%, -50% scale(0.5);
     transition: all 0.130s .1s; }
-    @media (max-width: 87.5em) {
+    @media only screen and (max-width: 87.5em) {
       .popup__content {
         display: block;
         float: left;
         padding: 9rem 2% 5% 2%; } }
-    @media (max-width: 68.75em) {
+    @media only screen and (max-width: 68.75em) {
       .popup__content {
         width: 85%; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__content {
         width: 90%; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__content {
         width: 95%; } }
-    @media (max-width: 25em) {
+    @media only screen and (max-width: 25em) {
       .popup__content {
         width: 99%;
         padding: 7rem 1% 2% 1%; } }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
-    @media (max-width: 87.5em) {
+    @media only screen and (max-width: 87.5em) {
       .popup__left {
         display: block;
         float: left;
@@ -1008,7 +1012,7 @@ body {
   .popup__img {
     width: 100%;
     object-fit: cover; }
-    @media (max-width: 87.5em) {
+    @media only screen and (max-width: 87.5em) {
       .popup__img {
         display: block;
         float: left;
@@ -1019,12 +1023,12 @@ body {
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
-    @media (max-width: 87.5em) {
+    @media only screen and (max-width: 87.5em) {
       .popup__right {
         display: block;
         float: left;
         width: 100%; } }
-    @media (max-width: 25em) {
+    @media only screen and (max-width: 25em) {
       .popup__right {
         padding: 1rem; } }
   .popup__text {
@@ -1040,7 +1044,7 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__text {
         column-count: 1; } }
 
@@ -1049,7 +1053,7 @@ body {
   background-color: #e6f6e4;
   margin-bottom: 15rem;
   border-radius: 3.5rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 5rem 2rem;
       padding-bottom: 10rem;
@@ -1062,7 +1066,7 @@ body {
   background-position: top;
   border-radius: 3.5rem;
   background-image: url(../img/features-background.jpg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-features {
       padding: 5rem 0;
       margin-bottom: 2rem; } }
@@ -1072,7 +1076,7 @@ body {
   margin-bottom: 15rem;
   background-color: #e6f6e4;
   border-radius: 3.5rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-best {
       padding: 5rem 0;
       margin-bottom: 2rem; } }
@@ -1082,7 +1086,7 @@ body {
   margin-bottom: 15rem;
   border-radius: 3.5rem;
   position: relative; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-stories {
       padding: 5rem 0;
       margin-bottom: 2rem; } }
@@ -1091,11 +1095,11 @@ body {
   padding: 5rem 0 15rem 0;
   margin-bottom: 15rem;
   border-radius: 3.5rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-book {
       padding: 5rem 0;
       margin-bottom: 2rem; } }
-  @media (max-width: 50em) {
+  @media only screen and (max-width: 50em) {
     .section-book {
       padding: 1rem 0; } }
 
@@ -1105,14 +1109,14 @@ body {
   background-repeat: no-repeat;
   border-radius: 1.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
-  @media (max-width: 46.875em) {
+  @media only screen and (max-width: 46.875em) {
     .book {
       padding: 1rem;
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9), 65%, transparent 70%), url(../img/card-mama.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
-    @media (max-width: 46.875em) {
+    @media only screen and (max-width: 46.875em) {
       .book__form {
         width: 65%;
         padding: 2rem; } }
